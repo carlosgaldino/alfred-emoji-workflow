@@ -18,8 +18,8 @@ items = names.grep(/#{query}/).map do |elem|
   emoji_code = ":#{elem}:"
 
   item_xml({ :arg => emoji_code, :uid => elem, :path => path, :title => emoji_code })
-end
+end.join
 
-output = "<?xml version='1.0'?>\n<items>\n#{items.join}</items>"
+output = "<?xml version='1.0'?>\n<items>\n#{items}</items>"
 
 puts output
