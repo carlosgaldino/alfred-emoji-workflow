@@ -2,10 +2,13 @@
 
 This simple workflow lets you search emoji codes.
 
-Usage: `emoji <query>`
+Usage: `emoji [query]`
 
 After you hit `enter` the code of the selected emoji will be copied to your
 clipboard.
+
+The `query` argument is optional. If you don't specify a `query`, the whole list of emoji
+will be presented.
 
 [DOWNLOAD](http://bit.ly/10Azqx2)
 
