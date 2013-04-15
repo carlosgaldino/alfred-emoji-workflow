@@ -7,6 +7,6 @@ Usage: `emoji <query>`
 After you hit `enter` the code of the selected emoji will be copied to your
 clipboard.
 
-[DOWNLOAD](https://github.com/carlosgaldino/alfred-emoji-workflow/raw/master/package/emoji-codes.alfredworkflow)
+[DOWNLOAD](http://bit.ly/10Azqx2)
 
 ![](http://f.cl.ly/items/1B1h0d0c093m3G2f0H1a/Screen%20Shot%202013-04-03%20at%2012.08.18%20AM.png)
