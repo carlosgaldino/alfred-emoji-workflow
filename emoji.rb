@@ -1,3 +1,5 @@
+require './emoji_symbols'
+
 def item_xml(options = {})
   <<-ITEM
   <item arg="#{options[:arg]}" uid="#{options[:uid]}">
@@ -17,7 +19,9 @@ items = names.grep(/#{query}/).map do |elem|
   path = File.join(images_path, "#{elem}.png")
   emoji_code = ":#{elem}:"
 
-  item_xml({ :arg => emoji_code, :uid => elem, :path => path, :title => emoji_code })
+  emoji_arg = ARGV.size > 1 ? EMOJI_SYMBOLS.fetch(elem.to_sym, emoji_code) : emoji_code
+
+  item_xml({ :arg => emoji_arg, :uid => elem, :path => path, :title => emoji_code })
 end.join
 
 output = "<?xml version='1.0'?>\n<items>\n#{items}</items>"
