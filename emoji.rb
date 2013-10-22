@@ -15,7 +15,7 @@ names = Dir["#{images_path}/*.png"].sort.map { |fn| File.basename(fn, '.png') }
 
 query = Regexp.escape(ARGV.first).delete(':')
 
-items = names.grep(/#{query}/).map do |elem|
+items = names.grep(/#{query}/i).map do |elem|
   path = File.join(images_path, "#{elem}.png")
   emoji_code = ":#{elem}:"
 
