@@ -19,4 +19,4 @@ the whole list of emoji will be presented.__
 
 [DOWNLOAD](http://bit.ly/10Azqx2)
 
-![](http://f.cl.ly/items/1B1h0d0c093m3G2f0H1a/Screen%20Shot%202013-04-03%20at%2012.08.18%20AM.png)
+![](http://f.cl.ly/items/3B18383s2O0B2Z0b2g11/Screen%20Shot%202013-12-06%20at%201.06.25%20AM.png)
