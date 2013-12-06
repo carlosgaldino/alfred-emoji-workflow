@@ -4,6 +4,7 @@ def item_xml(options = {})
   <<-ITEM
   <item arg="#{options[:arg]}" uid="#{options[:uid]}">
     <title>#{options[:title]}</title>
+    <subtitle>#{options[:subtitle]}</subtitle>
     <icon>#{options[:path]}</icon>
   </item>
   ITEM
@@ -21,7 +22,8 @@ items = names.grep(/#{query}/i).map do |elem|
 
   emoji_arg = ARGV.size > 1 ? EMOJI_SYMBOLS.fetch(elem.to_sym, emoji_code) : emoji_code
 
-  item_xml({ :arg => emoji_arg, :uid => elem, :path => path, :title => emoji_code })
+  item_xml({ :arg => emoji_arg, :uid => elem, :path => path, :title => emoji_code,
+             :subtitle => "Copy #{emoji_arg} to clipboard" })
 end.join
 
 output = "<?xml version='1.0'?>\n<items>\n#{items}</items>"
