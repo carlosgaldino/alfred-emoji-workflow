@@ -1,4 +1,5 @@
 require './emoji_symbols'
+require './related_words'
 
 def item_xml(options = {})
   <<-ITEM
@@ -10,13 +11,17 @@ def item_xml(options = {})
   ITEM
 end
 
-images_path = File.expand_path('../images/emoji', __FILE__)
+def match?(word, query)
+  word.match(/#{query}/i)
+end
 
-names = Dir["#{images_path}/*.png"].sort.map { |fn| File.basename(fn, '.png') }
+images_path = File.expand_path('../images/emoji', __FILE__)
 
 query = Regexp.escape(ARGV.first).delete(':')
 
-items = names.grep(/#{query}/i).map do |elem|
+matches = RELATED_WORDS.select { |k, v| match?(k, query) || v.any? { |r| match?(r, query) } }.keys
+
+items = matches.map do |elem|
   path = File.join(images_path, "#{elem}.png")
   emoji_code = ":#{elem}:"
 
