@@ -19,9 +19,13 @@ images_path = File.expand_path('../images/emoji', __FILE__)
 
 query = Regexp.escape(ARGV.first).delete(':')
 
-matches = RELATED_WORDS.select { |k, v| match?(k, query) || v.any? { |r| match?(r, query) } }.keys
+related_matches = RELATED_WORDS.select { |k, v| match?(k, query) || v.any? { |r| match?(r, query) } }.keys
 
-items = matches.map do |elem|
+image_matches = Dir["#{images_path}/*.png"].sort.map { |fn| File.basename(fn, '.png') }.select { |fn| match?(fn, query) }
+
+matches = image_matches + related_matches
+
+items = matches.uniq.map do |elem|
   path = File.join(images_path, "#{elem}.png")
   emoji_code = ":#{elem}:"
 
