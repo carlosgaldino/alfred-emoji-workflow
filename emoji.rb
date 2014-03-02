@@ -19,13 +19,16 @@ images_path = File.expand_path('../images/emoji', __FILE__)
 
 query = Regexp.escape(ARGV.first).delete(':')
 
-related_matches = RELATED_WORDS.select { |k, v| match?(k, query) || v.any? { |r| match?(r, query) } }.keys
+related_matches = RELATED_WORDS.select { |k, v| match?(k, query) || v.any? { |r| match?(r, query) } }
+# Support 1.9+ and 1.8.7.
+# 1.8.7 returns a ['key', ['value', 'values']] instead of a hash. Stupid.
+related_matches = related_matches.respond_to?(:keys) ? related_matches.keys : related_matches.map { |match| match[0] }
 
-image_matches = Dir["#{images_path}/*.png"].sort.map { |fn| File.basename(fn, '.png') }.select { |fn| match?(fn, query) }
+image_matches = Dir["#{images_path}/*.png"].map { |fn| File.basename(fn, '.png') }.select { |fn| match?(fn, query) }
 
 matches = image_matches + related_matches
 
-items = matches.uniq.map do |elem|
+items = matches.uniq.sort.map do |elem|
   path = File.join(images_path, "#{elem}.png")
   emoji_code = ":#{elem}:"
 
