@@ -156,7 +156,7 @@ RELATED_WORDS = {
   'sandal' => ['shoes', 'fashion'],
   'high_heel' => ['fashion', 'shoes', 'female'],
   'boot' => ['shoes', 'fashion'],
-    
+
   'tshirt' => ['fashion'],
   'shirt' => ['fashion', 'cloth'],
   'necktie' => ['shirt', 'suitup', 'formal', 'fashion', 'cloth'],
@@ -174,7 +174,7 @@ RELATED_WORDS = {
   'ribbon' => ['decoration', 'pink', 'girl', 'bowtie'],
   'closed_umbrella' => ['weather', 'rain'],
   'lipstick' => ['female', 'girl', 'fashion'],
-    
+
   'yellow_heart' => ['love', 'like', 'affection', 'valentines'],
   'blue_heart' => ['love', 'like', 'affection', 'valentines'],
   'purple_heart' => ['love', 'like', 'affection', 'valentines'],
@@ -196,7 +196,7 @@ RELATED_WORDS = {
   'speech_balloon' => ['bubble', 'words'],
   'footprints' => ['feet'],
   'thought_balloon' => ['bubble', 'cloud', 'speech'],
-    
+
   'dog' => ['animal', 'friend', 'nature', 'woff'],
   'wolf' => ['animal', 'nature'],
   'cat' => ['animal'],
@@ -306,7 +306,7 @@ RELATED_WORDS = {
   'sunny' => ['weather', 'brightness'],
   'partly_sunny' => ['weather', 'nature', 'cloud', 'morning'],
   'cloud' => ['weather', 'sky'],
-  'zap' => ['thunder', 'weather'],
+  'zap' => ['thunder', 'weather', 'lighting', 'lightning'],
   'umbrella' => ['rain', 'weather'],
   'snowflake' => ['winter', 'season', 'cold', 'weather', 'christmas', 'xmas'],
   'snowman' => ['winter', 'season', 'cold', 'weather', 'christmas', 'xmas'],
