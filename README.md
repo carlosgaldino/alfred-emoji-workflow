@@ -14,6 +14,12 @@ Usage: `symoji [query]`
 After you hit `enter` the symbol of the selected emoji will be copied to your
 clipboard.
 
+## Customizing the keywords:
+
+If you don't like the keywords that are used for triggering the search you can
+customize it directly on Alfred. Some suggested using `:` for searching the
+emoji code and `emoji` for the actual symbols.
+
 ### Last but not least:
 
 * __The `query` argument is optional for both commands. If you don't specify a `query`,
