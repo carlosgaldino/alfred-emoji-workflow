@@ -48,6 +48,14 @@
 				<integer>36</integer>
 				<key>keyword</key>
 				<string>emoji</string>
+				<key>queuedelaycustom</key>
+				<integer>1</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<false/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
 				<key>runningsubtext</key>
 				<string>Loading results...</string>
 				<key>script</key>
@@ -90,6 +98,14 @@
 				<integer>36</integer>
 				<key>keyword</key>
 				<string>symoji</string>
+				<key>queuedelaycustom</key>
+				<integer>1</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<false/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
 				<key>runningsubtext</key>
 				<string>Loading results...</string>
 				<key>script</key>
