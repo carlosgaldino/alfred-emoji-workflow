@@ -6,22 +6,41 @@
 	<string>carlosgaldino.emoji-codes</string>
 	<key>connections</key>
 	<dict>
-		<key>18314CAD-E0C0-45FD-A21E-69F5D30C7DE5</key>
+		<key>48F47C79-01A7-4C1D-8239-1DAF1D54F7E6</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
 				<string>2404AE08-D4CF-4265-B7BB-44043DD356DD</string>
+				<key>modifiers</key>
+				<integer>524288</integer>
+				<key>modifiersubtext</key>
+				<string>Copy ":{query}:" to clipboard</string>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>E3177611-6C51-4BC1-BE47-608823C1FE44</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
 			</dict>
 		</array>
-		<key>48F47C79-01A7-4C1D-8239-1DAF1D54F7E6</key>
+		<key>E1633402-43A3-4B78-91D0-8A3EE378C20E</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>2404AE08-D4CF-4265-B7BB-44043DD356DD</string>
+				<string>48F47C79-01A7-4C1D-8239-1DAF1D54F7E6</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+		<key>E3177611-6C51-4BC1-BE47-608823C1FE44</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>143B793E-A860-474A-8BE3-F88BCEB134E1</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -78,9 +97,9 @@
 			<key>config</key>
 			<dict>
 				<key>autopaste</key>
-				<false/>
+				<true/>
 				<key>clipboardtext</key>
-				<string>{query}</string>
+				<string>:{query}:</string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.output.clipboard</string>
@@ -92,35 +111,61 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>argumenttype</key>
-				<integer>1</integer>
-				<key>escaping</key>
-				<integer>36</integer>
-				<key>keyword</key>
-				<string>symoji</string>
-				<key>queuedelaycustom</key>
-				<integer>1</integer>
-				<key>queuedelayimmediatelyinitially</key>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>0</integer>
+				<key>hotkey</key>
+				<integer>0</integer>
+				<key>hotmod</key>
+				<integer>0</integer>
+				<key>hotstring</key>
+				<string></string>
+				<key>leftcursor</key>
 				<false/>
-				<key>queuedelaymode</key>
+				<key>modsmode</key>
 				<integer>0</integer>
-				<key>queuemode</key>
-				<integer>1</integer>
-				<key>runningsubtext</key>
-				<string>Loading results...</string>
-				<key>script</key>
-				<string>ruby emoji.rb "{query}" bla</string>
-				<key>title</key>
-				<string>Search emoji symbols</string>
-				<key>type</key>
+				<key>relatedAppsMode</key>
 				<integer>0</integer>
-				<key>withspace</key>
-				<true/>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.input.scriptfilter</string>
+			<string>alfred.workflow.trigger.hotkey</string>
 			<key>uid</key>
-			<string>18314CAD-E0C0-45FD-A21E-69F5D30C7DE5</string>
+			<string>E1633402-43A3-4B78-91D0-8A3EE378C20E</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>script</key>
+				<string>ruby emoji_to_symbol.rb "{query}"</string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>E3177611-6C51-4BC1-BE47-608823C1FE44</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<true/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>143B793E-A860-474A-8BE3-F88BCEB134E1</string>
 			<key>version</key>
 			<integer>0</integer>
 		</dict>
@@ -129,10 +174,10 @@
 	<string></string>
 	<key>uidata</key>
 	<dict>
-		<key>18314CAD-E0C0-45FD-A21E-69F5D30C7DE5</key>
+		<key>143B793E-A860-474A-8BE3-F88BCEB134E1</key>
 		<dict>
 			<key>ypos</key>
-			<real>140</real>
+			<real>210</real>
 		</dict>
 		<key>2404AE08-D4CF-4265-B7BB-44043DD356DD</key>
 		<dict>
@@ -142,7 +187,17 @@
 		<key>48F47C79-01A7-4C1D-8239-1DAF1D54F7E6</key>
 		<dict>
 			<key>ypos</key>
-			<real>10</real>
+			<real>70</real>
+		</dict>
+		<key>E1633402-43A3-4B78-91D0-8A3EE378C20E</key>
+		<dict>
+			<key>ypos</key>
+			<real>70</real>
+		</dict>
+		<key>E3177611-6C51-4BC1-BE47-608823C1FE44</key>
+		<dict>
+			<key>ypos</key>
+			<real>210</real>
 		</dict>
 	</dict>
 	<key>webaddress</key>
