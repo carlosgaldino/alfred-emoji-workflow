@@ -30,12 +30,12 @@ matches = image_matches + related_matches
 
 items = matches.uniq.sort.map do |elem|
   path = File.join(images_path, "#{elem}.png")
-  emoji_code = ":#{elem}:"
+  emoji_code = "#{elem}"
 
-  emoji_arg = ARGV.size > 1 ? EMOJI_SYMBOLS.fetch(elem.to_sym, emoji_code) : emoji_code
+  emoji = EMOJI_SYMBOLS[elem.to_sym]
 
-  item_xml({ :arg => emoji_arg, :uid => elem, :path => path, :title => emoji_code,
-             :subtitle => "Copy #{emoji_arg} to clipboard" })
+  item_xml({ :arg => emoji_code, :uid => elem, :path => path, :title => emoji_code,
+             :subtitle => "Copy \"#{emoji}\" (#{elem}) to clipboard" })
 end.join
 
 output = "<?xml version='1.0'?>\n<items>\n#{items}</items>"
