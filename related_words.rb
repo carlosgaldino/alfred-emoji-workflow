@@ -885,5 +885,6 @@ RELATED_WORDS = {
   'clock630' => ['time', 'clock'],
   'notebook_with_decorative_cover' => [],
   'horse_racing' => ['animal', 'betting'],
-  'christmas_tree' => ['festival', 'vacation', 'december', 'xmas', 'pine']
+  'christmas_tree' => ['festival', 'vacation', 'december', 'xmas', 'pine'],
+  'robot_face' => ['robot', 'bot', 'droid']
 }
