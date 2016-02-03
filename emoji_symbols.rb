@@ -633,6 +633,7 @@ EMOJI_SYMBOLS = {
   :rice_cracker => '🍘',
   :rice_scene => '🎑',
   :ring => '💍',
+  :robot_face => '🤖',
   :rocket => '🚀',
   :roller_coaster => '🎢',
   :rooster => '🐓',
