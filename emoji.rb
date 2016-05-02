@@ -12,7 +12,7 @@ def item_xml(options = {})
 end
 
 def match?(word, query)
-  word.match(/#{query}/i)
+  word.match(/#{query.split('').join('.*')}/i)
 end
 
 images_path = File.expand_path('../images/emoji', __FILE__)
